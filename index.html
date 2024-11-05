@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Roboto", Georgia, 'Times New Roman', Times, serif;
+            background: linear-gradient(70deg, blue, pink);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .cta-button a {
+            background-color: #f1c40f;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button a:hover {
+            background-color: #e1b90f;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 85vh;
+            color: white;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/CSS-new-features-cover-800x593.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 250px;
+            background-color: rgb(183, 175, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #272727;
+        }
+
+        .card-content p {
+            margin: 10px 0 0;
+            color: #000000;
+            font-size: 0.95em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230803130837/CSS.webp" alt="Logo CSS">
+        </div>
+        <nav>
+            <a href="#home">Inicio</a>
+            <a href="#services">CSS</a>
+            <a href="#about">Styles</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome</h1><br>
+        <p>To CSS</p>
+    </section>
+
+    <!-- Card Container -->
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkdDy1MPyAklifM98twCxSuRj7EVJPO0cmHg&s" alt="Imagen de CSS">
+            <div class="card-content">
+                <h2>1. Definición de CSS</h2>
+                <p>CSS (Cascading Style Sheets) es un lenguaje de diseño utilizado para describir la presentación de documentos HTML. Es decir, CSS se encarga de dar estilo a las páginas web, definiendo cómo se verán los elementos (colores, tamaños, fuentes, etc.) y cómo se organizarán en la pantalla.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/0*6zs8a4sWecKzE1sU" alt="Imagen de Funcionamiento Básico">
+            <div class="card-content">
+                <h2>2. Funcionamiento Básico de CSS</h2>
+                <p>CSS funciona añadiendo reglas de estilo a los elementos HTML. Estas reglas se escriben en un archivo separado o directamente dentro del código HTML. El navegador interpreta estas reglas y aplica los estilos correspondientes a los elementos seleccionados.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://i.workana.com/wp-content/uploads/2018/11/css-1.jpg" alt="Imagen de Inclusión de CSS">
+            <div class="card-content">
+                <h2>3. Incluir CSS en un archivo HTML</h2>
+                <p>Hay tres formas principales de incluir CSS en un archivo HTML:
+                    <ul>
+                        <li>En un archivo externo: Se crea un archivo con extensión .css y se enlaza desde el elemento <strong>link</strong> dentro del <strong>head</strong>.</li>
+                        <li>Dentro del elemento <strong>head:</strong> Se crea un elemento <strong>style</strong> y se escriben las reglas de estilo dentro de él.</li>
+                    </ul>
+                </p>
+                <p>Ejemplo de enlace a un archivo CSS externo: <strong>&lt;link rel="stylesheet" href="styles.css"&gt;</strong></p>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh48dvhE_c_SXJ-L40anx4sHbsnXxQnjmzuhBO9drfPs0xIbAA4-LgtZ2bDfxh0eVB5u2TAx53x8j-h-7J2JlIrvsYnceE4XiImn1M7kpZ-jITrUVVUx3rJIYYM66QCGlEwagv8Egx8TZo/w1200-h630-p-k-no-nu/reglas+css.jpg" alt="Imagen de reglas CSS">
+            <div class="card-content">
+                <h2>4. Definición de una regla CSS</h2>
+                <p>Una regla CSS es una instrucción que define cómo se mostrará un elemento HTML. Se compone de dos partes principales: un selector y un bloque de declaración.</p>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="https://josetxu.com/wp-content/uploads/2014/09/css_estructura_basica.jpg" alt="Imagen de Elementos CSS">
+            <div class="card-content">
+                <h2>5. Elementos de una regla CSS</h2>
+                <p><strong>Selector:</strong> Indica a qué elementos HTML se aplicará la regla. Puede ser un elemento HTML (p.ej., p), una clase (p.ej., .destacado) o un ID (p.ej., #miParrafo).</p>
+                <p><strong>Propiedad:</strong> Es una característica que se puede modificar en un elemento (p.ej., color, font-size).</p>
+                <p><strong>Valor:</strong> Es el valor asignado a la propiedad (p.ej., red, 16px).</p>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="https://cronuts.digital/wp-content/uploads/2020/04/Artboard-11-1024x724.png" alt="Imagen de Medios CSS">
+            <div class="card-content">
+                <h2>6. Medios CSS</h2>
+                <p>Los medios CSS permiten aplicar diferentes estilos a un documento en función del medio en el que se visualiza (pantalla, impresión, etc.). Se utilizan las @media queries para definir reglas específicas para cada medio.</p>
+                <p>Ejemplo:</p>
+                <pre>
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+                </pre>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="https://www.jesustovar.es/wp-content/uploads/2012/07/comentarios-html-css-php-javascript-vbscript-980x431.jpg" alt="Imagen de Comentarios CSS">
+            <div class="card-content">
+                <h2>7. Comentarios CSS</h2>
+                <p>Los comentarios se utilizan para añadir notas explicativas al código CSS sin que afecten al resultado final. Se escriben entre /* y */.</p>
+                <p>Ejemplo: <br>
+                    /* Este es un comentario de una línea */ <br>
+                    p { <br>
+                    color: blue; /* Color del texto */ <br>
+                    } <br>
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <img src="https://i.ytimg.com/vi/416MT-VmJdI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCf75IEweVwfEEBq5op1XogOgs9MA" alt="Imagen de Sintaxis CSS">
+            <div class="card-content">
+                <h2>8. Sintaxis de la definición de las propiedades CSS</h2>
+                <p><strong>La sintaxis general de una propiedad CSS es:</strong> <br>
+                    propiedad: valor; <br>
+                    color: red; <br>
+                    font-size: 16px;<br>
+                    margin: 10px;
+                </p>
+                <p><strong>Importante:</strong> Los valores de las propiedades pueden ser de diferentes tipos:
+                    <ul>
+                        <li><strong>Palabras clave:</strong> none, inherit, auto, etc.</li>
+                        <li><strong>Números:</strong> Con o sin unidades (px, em, etc.).</li>
+                        <li><strong>Colores:</strong> Nombres de colores, códigos hexadecimales, RGB, HSL.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            &copy; DanielR 2024
+        </div>
+    </footer>
+</body>
+</html>
